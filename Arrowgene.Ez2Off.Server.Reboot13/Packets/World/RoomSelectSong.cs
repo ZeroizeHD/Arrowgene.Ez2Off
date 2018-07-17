@@ -130,6 +130,13 @@ namespace Arrowgene.Ez2Off.Server.Reboot13.Packets.World
                     buffer.WriteInt32((int) client.Room.Info.Difficulty);
                     break;
                 case RoomOptionType.ViewVideo:
+                    client.Room.Info.SelectedSong = packet.Data.ReadInt32();
+                    client.Room.Info.Difficulty = (DifficultyType) packet.Data.ReadInt32();
+                    buffer.WriteByte(0);
+                    buffer.WriteByte(0);
+                    buffer.WriteInt32((int) roomOption);
+                    buffer.WriteInt32((int) client.Room.Info.SelectedSong);
+                    buffer.WriteInt32((int) client.Room.Info.Difficulty);
                     // TODO deduct 1000 coins.
                     break;
             }
