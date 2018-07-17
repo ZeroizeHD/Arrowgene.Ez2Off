@@ -65,7 +65,7 @@ namespace Arrowgene.Ez2Off.Server.Reboot13.Packets.Builder
                 buffer.WriteInt32(client.Character.Exp);
                 buffer.WriteInt32(Character.ExpForNextLevel(client.Character));
                 buffer.WriteInt32(score.TotalScore, Endianness.Big); // Best Score
-                buffer.WriteByte(1); //Song completion EXR increase
+                buffer.WriteByte(0); //Song completion EXR increase
                 buffer.WriteByte((byte) client.Character.GetExr(client.Mode));
             }
 
