@@ -38,7 +38,7 @@ namespace Arrowgene.Ez2Off.Common.Models
         {
             Name = name;
             Sex = CharacterSex.Male;
-            Level = 99;
+            Level = 1;
             RubyExr = 0;
             StreetExr = 0;
             ClubExr = 0;
